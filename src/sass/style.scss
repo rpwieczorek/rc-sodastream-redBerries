@@ -1,0 +1,630 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: 'HurmeGeometricSans3-Bold';
+  src: local('HurmeGeometricSans3-Bold'), url('../fonts/HurmeGeometricSans3-Bold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'HurmeGeometricSans3-Regular';
+  src: local('HurmeGeometricSans3-Regular'), url('../fonts/HurmeGeometricSans3-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'HurmeGeometricSans3-Black';
+  src: local('HurmeGeometricSans3-Black'), url('../fonts/HurmeGeometricSans3-Black.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'HurmeGeometricSans3-Light';
+  src: local('HurmeGeometricSans3-Light'), url('../fonts/HurmeGeometricSans3-Light.ttf') format('truetype');
+}
+
+$light: 'HurmeGeometricSans3-Light', sans-serif;
+$regular: 'HurmeGeometricSans3-Regular', sans-serif;
+$bold: 'HurmeGeometricSans3-Bold', sans-serif;
+$black: 'HurmeGeometricSans3-Black', sans-serif;
+$blue: #13294b;
+$text: #13294b;
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin text {
+  margin: 0;
+  padding: 0;
+  line-height: inherit;
+  color: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+}
+
+@mixin img {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+#es-sodastream.es-sodastream {
+  font-family: $regular;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.2;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+  overflow: hidden;
+  color: $text;
+  background: #ebe6e1;
+
+  * {
+    box-sizing: border-box;
+  }
+
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-family: $regular;
+    color: $black;
+  }
+  .es-kv {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    &__logo {
+      position: relative;
+      margin: 0 auto;
+      padding: 30px 15px;
+      max-width: 90%;
+    }
+    &__title {
+      position: relative;
+      @include text;
+      font-family: $bold;
+      padding: 15px;
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 28px;
+      font-weight: 700;
+    }
+    &__packshot {
+      position: relative;
+      &--photo {
+        @include img;
+        padding-top: 50px;
+        position: relative;
+        z-index: 1;
+      }
+    }
+    &__bgtitle {
+      position: absolute;
+      top: -40px;
+      left: 50%;
+      z-index: 0;
+      @include text;
+      font-family: $black;
+      padding: 15px;
+      text-align: center;
+      font-size: 100px;
+      font-weight: 900;
+      color: #e5dcd3;
+      transform: translate(-50%);
+    }
+    &__img {
+      @include img;
+    }
+    &__text {
+      @include text;
+      font-family: $light;
+      padding: 15px;
+      font-weight: 100;
+      text-align: center;
+    }
+
+  }
+
+  .es-posibilities {
+    margin: 30px 0 0;
+    &__title {
+      position: relative;
+      @include text;
+      font-family: $bold;
+      padding: 15px 15px 0;
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 28px;
+      font-weight: 700;
+    }
+    &__subtitle {
+      @include text;
+      padding-top: 20px;
+      font-size: 28px;
+      font-family: $bold;
+      text-align: center;
+    }
+    &__text {
+      @include text;
+      margin: 0 auto;
+      width: 80%;
+      font-size: 20px;
+      font-family: $light;
+      text-align: center;
+      padding: 0 15px 30px;
+    }
+    &__img {
+      @include img;
+    }
+  }
+
+  .es-info {
+    margin: 0;
+    padding: 0;
+    background-color: $blue;
+    &__title {
+      position: relative;
+      @include text;
+      margin: 0 auto;
+      color: #fff;
+      font-family: $bold;
+      padding: 25px;
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 28px;
+      font-weight: 700;
+    }
+    &__titleBig {
+      position: relative;
+      @include text;
+      margin: 0 auto;
+      color: #fff;
+      font-family: $bold;
+      padding: 25px;
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 36px;
+      font-weight: 700;
+    }
+    &__text {
+      width: 90%;
+      @include text;
+      margin: 0 auto;
+      font-family: $light;
+      color: #fff;
+      padding: 0 15px 25px;
+      font-weight: 100;
+      text-align: center;
+    }
+  }
+
+  .es-photo {
+    background: linear-gradient($blue 0%, $blue 50%, transparent 50%, transparent 100%);
+    &__img {
+      @include img;
+      padding: 20px 20px;
+    }
+  }
+
+
+
+  .es-slider {
+    margin: 64px 0 0;
+    padding-bottom: 64px;
+    &__title {
+      @include text;
+      padding: 15px 0;
+      text-align: center;
+      font-size: 24px;
+      font-weight: 700;
+      font-family: $bold;
+    }
+    &__text {
+      @include text;
+      text-align: center;
+      font-family: $light;
+      font-size: 24px;
+      font-weight: 300;
+    }
+    &__wrapper {
+      padding: 0 16px;
+    }
+    &__content {
+      max-width: 100%;
+      padding: 16px 28px;
+      position: relative;
+    }
+    &__img {
+      @include img;
+    }
+    &__imgage {
+      @include img;
+    }
+    &__slide {
+      position: relative;
+      width: 100%
+    }
+    &__firstSlide {
+      display: flex;
+      flex-wrap: wrap;
+      &--tile {
+        padding: 15px;
+        width: 100%;
+      }
+    }
+    &__icons {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      justify-content: space-around;
+      gap: 10px 10px;
+      &--img {
+        @include img;
+        max-width: 120px;
+      }
+      &--title {
+        @include text;
+        padding: 10px 0;
+        text-align: center;
+        font-family: $bold;
+        font-size: 18px;
+      }
+    }
+    &__number {
+      @include text;
+      font-family: $black;
+      font-size: 40px;
+      text-align: center;
+    }
+    .swiper-slide {
+      display: flex;
+      align-items: center;
+    }
+    .swiper-button-prev:after,
+    .swiper-container-rtl .swiper-button-next:after {
+      display: none;
+    }
+    .swiper-button-next:after,
+    .swiper-container-rtl .swiper-button-prev:after {
+      display: none;
+    }
+    .swiper-button-next,
+    .swiper-container-rtl .swiper-button-prev {
+      right: -1%;
+    }
+    .swiper-button-prev,
+    .swiper-container-rtl .swiper-button-next {
+      left: -1%;
+    }
+  }
+
+  .es-triple {
+    padding: 0 15px;
+    &__title {
+      position: relative;
+      @include text;
+      font-family: $bold;
+      padding: 15px 15px 0;
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 36px;
+      font-weight: 700;
+    }
+    &__text {
+      @include text;
+      margin: 0 auto;
+      width: 80%;
+      font-size: 20px;
+      font-family: $light;
+      text-align: center;
+      padding: 0 15px 30px;
+    }
+    &__wrapper {
+      display: flex;
+      padding: 40px 20px;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-around;
+    }
+    &__single {
+      height: 100%;
+      position: relative;
+    }
+    &__desc {
+      @include text;
+      font-family: $bold;
+      font-size: 30px;
+      text-align: center;
+      padding-top: 20px
+      // position: absolute;
+      // bottom: 15%;
+      // left: 50%;
+      // transform: translate(-50%);
+    }
+    &__img {
+      @include img;
+    }
+  }
+
+  .es-your {
+    background: linear-gradient(transparent 0%, transparent 50%, #e5dcd3 50%, #e5dcd3 100%);
+    &__title {
+      @include text;
+      font-size: 28px;
+      font-family: $bold;
+      text-align: center;
+    }
+    &__img {
+      @include img;
+      padding: 30px 15px 15px;
+    }
+    &__text {
+      @include text;
+      font-size: 16px;
+      font-family: $light;
+      text-align: center;
+      padding: 0 15px 30px;
+    }
+  }
+  .es-video {
+    margin: 0 auto 64px;
+    width: 80%;
+    position: relative;
+    &__title {
+      @include text;
+      text-transform: uppercase;
+      font-size: 30px;
+      font-weight: 700;
+      font-family: $bold;
+      text-align: center;
+      margin-bottom: 32px;
+      margin-top: 32px;
+      padding: 0 16px;
+    }
+    &__subtitle {
+      @include text;
+      font-size: 40px;
+      font-weight: 700;
+      font-family: $bold;
+      text-align: center;
+      margin-bottom: 32px;
+      margin-top: 32px;
+    }
+    &__container {
+      margin: 0 auto;
+      width: 100%;
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+    }
+    &__iframe {
+      border: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+    &__img {
+      @include img;
+      max-width: 200px;
+    }
+  }
+
+  @media screen and (min-width: 500px) {
+    .es-triple {
+      &__wrapper {
+        flex-wrap: nowrap;
+      }
+    }
+    .es-video {
+      &__subtitle {
+        font-size: 50px;
+      }
+      &__img {
+        max-width: 300px;
+      }
+    }
+  }
+  @media screen and (min-width: 768px) {
+    .es-kv {
+      min-height: 490px;
+      &__logo {
+        position: relative;
+        margin: 0 20px;
+        padding: 15px;
+        max-width: 50%;
+      }
+      &__title {
+        position: absolute;
+        left: 20px;
+        top: 40%;
+        padding: 15px;
+        text-align: left;
+        font-size: 35px;
+      }
+      &__packshot {
+        position: absolute;
+        right: 0;
+        top: 30px;
+        width: 350px;
+        &--photo {
+          @include img;
+          padding: 0;
+          position: relative;
+          z-index: 1;
+        }
+      }
+      &__bgtitle {
+        position: absolute;
+        top: 75px;
+        left: -26%;
+        padding: 15px;
+        font-size: 150px;
+        font-weight: 900;
+        color: #e5dcd3;
+      }
+      &__text {
+        width: 500px;
+        position: absolute;
+        left: 20px;
+        top: 70%;
+        text-align: left;
+        font-size: 15px;
+      }
+    }
+    .es-slider {
+      &__content {
+        display: flex;
+        flex-flow: row-reverse;
+        padding: 32px;
+      }
+      &__firstSlide {
+        display: flex;
+        flex-wrap: nowrap;
+        &--tile {
+          width: 50%;
+        }
+      }
+      &__title {
+        text-align: left;
+      }
+      &__text {
+        text-align: left;
+      }
+      .swiper-button-next,
+      .swiper-container-rtl .swiper-button-prev {
+        right: -1%;
+      }
+      .swiper-button-prev,
+      .swiper-container-rtl .swiper-button-next {
+        left: -1%;
+      }
+    }
+    .es-video {
+      &__subtitle {
+        font-size: 60px;
+      }
+    }
+    .es-triple {
+      &__title {
+        font-size: 50px;
+      }
+    }
+    .es-info {
+      &__titleBig {
+        font-size: 50px;
+      }
+    }
+  }
+  @media screen and (min-width: 998px) {
+    .es-kv {
+      min-height: 620px;
+      &__logo {
+        position: relative;
+        margin: 0;
+        padding: 15px 0;
+        max-width: 50%;
+      }
+      &__title {
+        position: absolute;
+        left: 40px;
+        top: 40%;
+        padding: 15px;
+        text-align: left;
+        font-size: 50px;
+      }
+      &__packshot {
+        position: absolute;
+        right: 0;
+        top: 30px;
+        width: 450px;
+        &--photo {
+          @include img;
+          padding: 0;
+          position: relative;
+          z-index: 1;
+        }
+      }
+      &__bgtitle {
+        position: absolute;
+        top: 75px;
+        left: -26%;
+        padding: 15px;
+        font-size: 200px;
+        font-weight: 900;
+        color: #e5dcd3;
+      }
+      &__text {
+        width: 650px;
+        position: absolute;
+        left: 40px;
+        top: 75%;
+        text-align: left;
+        font-size: 15px;
+      }
+    }
+    .es-posibilities {
+      &__title {
+        font-size: 36px;
+      }
+    }
+    .es-info {
+      &__title {
+        font-size: 36px;
+      }
+      &__text {
+        font-size: 20px;
+      }
+    }
+    .es-your {
+      &__title {
+        font-size: 36px;
+      }
+      &__text {
+        font-size: 20px;
+      }
+    }
+    .es-video {
+      &__title {
+        font-size: 36px;
+      }
+    }
+  }
+}
+
+@keyframes slidedown {
+  from {
+    opacity: 0;
+    transform: translateY(-32px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideright {
+  from {
+    opacity: 0.3;
+    transform: translateX(-100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideleft {
+  from {
+    opacity: 0.3;
+    transform: translateX(100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
